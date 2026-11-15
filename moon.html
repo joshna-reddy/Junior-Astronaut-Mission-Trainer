@@ -87,7 +87,12 @@
 </button>
 
     <!-- Connects the game with its JavaScript file -->
-   <script src="./moon.js"></script>
+   <p id="test-status">Checking game...</p>
+
+<script src="./moon.js"
+onload="document.getElementById('test-status').textContent='JavaScript loaded successfully!'"
+onerror="document.getElementById('test-status').textContent='ERROR: moon.js not found!'">
+</script>
 
 </body>
 </html>
