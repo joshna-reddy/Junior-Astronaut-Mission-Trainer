@@ -1,10 +1,10 @@
 function startMission() {
     document.getElementById("mission-screen").hidden = false;
 }function chooseMoon() {
-     window.location.href="/moon";
+     window.location.href="/moon.html";
 }
 function chooseSaturn() {
-    window.location.href="/saturn";
+    window.location.href="/saturn.html";
 }
     function completeDay() {
         let day = Number(document.getElementById("day").textContent);
