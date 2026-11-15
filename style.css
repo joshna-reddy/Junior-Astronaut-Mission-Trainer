@@ -1,0 +1,64 @@
+body {
+    background: linear-gradient(135deg, #090979, #4B0082, #C026D3, #071952);
+    color: white;
+    font-family: "Comic Sans MS", sans-serif;
+}
+h1 {
+    color:yellow ;
+    text-align: center;
+    font-size: 44px;
+}
+p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+button {
+    background-color: yellow;
+    color: darkblue;
+    padding: 12px 25px;
+    border: black;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "Comic Sans MS", sans-serif;
+    cursor: pointer;
+}
+body {
+    margin: 30px;
+    padding: 20px;
+}
+h2 {
+    color: yellow;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 30px;
+    border-bottom: 2px solid yellow;
+    padding-bottom: 10px;
+}
+button:hover {
+    background-color: orange;
+    color: white;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+button {
+    margin: 10px;
+}
+#mission-screen {
+    background-color: #171044;
+    border: 2px solid #00E5FF;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 30px;
+}
+.progress-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.progress-container progress {
+    width: 60%;
+    height: 18px;
+    accent-color: #E45DE8;
+}

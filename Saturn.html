@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturn Space Adventure</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #020414;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            background: #101a38;
+        }
+
+        .game-layout {
+            display: grid;
+            grid-template-columns: 1fr 270px;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        #space-scene {
+            height: 650px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #566da8;
+            border-radius: 12px;
+        }
+
+        #space-scene canvas {
+            display: block;
+        }
+
+        .instructions {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+        }
+
+        .dashboard {
+            background: #111a38;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .resource {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            margin: 8px 0;
+            background: #202d55;
+            border-radius: 8px;
+        }
+
+        .resource strong {
+            color: #70f0b0;
+        }
+
+        .score-box {
+            text-align: center;
+            padding: 15px;
+            background: #293d73;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #547cff;
+            color: white;
+            cursor: pointer;
+        }
+
+        #message {
+            min-height: 45px;
+        }
+
+        @media(max-width: 800px) {
+            .game-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🪐 Saturn Space Exploration Mission</h1>
+        <p>Float through space and collect survival resources!</p>
+    </header>
+
+    <main class="game-layout">
+
+        <section id="space-scene">
+
+            <div class="instructions">
+                W A S D / Arrow Keys = Move
+                <br>
+                Space = Move Up
+                <br>
+                Shift = Move Down
+                <br>
+                Fly close to resources to collect them!
+            </div>
+
+        </section>
+
+        <aside class="dashboard">
+
+            <h2>🚀 Mission Dashboard</h2>
+
+            <div class="resource">
+                <span>🫧 Oxygen</span>
+                <strong id="oxygen">0</strong>
+            </div>
+
+            <div class="resource">
+                <span>💧 Water</span>
+                <strong id="water">0</strong>
+            </div>
+
+            <div class="resource">
+                <span>⚡ Power</span>
+                <strong id="power">0</strong>
+            </div>
+
+            <div class="resource">
+                <span>🍎 Food</span>
+                <strong id="food">0</strong>
+            </div>
+
+            <div class="score-box">
+                <p>Total Collection Points</p>
+                <h2 id="score">0</h2>
+            </div>
+
+            <p id="message">
+                Your Saturn space mission has started!
+            </p>
+
+            <button onclick="resetGame()">
+                Restart Mission
+            </button>
+
+            <button onclick="window.location.href='/'">
+                Back to Home
+            </button>
+
+        </aside>
+
+    </main>
+
+    <script type="module"
+            src="{{ url_for('static', filename='game.js') }}">
+    </script>
+
+</body>
+</html>

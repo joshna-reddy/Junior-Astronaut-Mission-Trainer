@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Junior Astronaut Mission Trainer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Junior Astronaut Mission Trainer</h1>
+    <p>Welcome to the space world!</p>
+    <p>Are you exicted to explore space world,complete your mission,keep your crew safe.</p>
+    <button onclick="startMission()">Start Mission</button>
+    <section id="mission-screen" hidden>
+
+    <h2>Your Space Mission Begins!</h2>
+
+    <p>Welcome, Captain!</p>
+
+    <p>Your mission is to keep your crew safe and manage your space station.</p>
+
+    <h2>Mission Status</h2>
+
+    <p>Mission Day: <span id="day">1</span></p>
+    <div class="progress-container">
+    <p>Mission Progress:</p>
+    <progress id="mission-progress" value="0" max="6"></progress>
+    <span id="progress-text">0%</span>
+</div>
+    <h2>Space Station Resources</h2>
+
+<p>Oxygen: <span id="oxygen">100</span>%</p>
+<p>Water: <span id="water">98</span>%</p>
+<p>Food: <span id="food">90</span>%</p>
+<p>Power: <span id="power">100</span>%</p>
+    
+<h2>Astronaut Daily Tasks</h2>
+
+<ul>
+    <li><input type="checkbox" class="mission-task"> Check oxygen supply</li>
+    <li><input type="checkbox" class="mission-task"> Check water level</li>
+    <li><input type="checkbox" class="mission-task"> Collect food supplies</li>
+    <li><input type="checkbox" class="mission-task"> Check space station power</li>
+    <li><input type="checkbox" class="mission-task"> Send message to Earth</li>
+</ul>
+
+</ul>
+<h2>Mission Activity</h2>
+
+<button onclick="completeDay()">Complete Mission Day</button>
+<button onclick="resetMission()">Restart Mission</button>
+<p id=""mission-message"></p>
+</section>
+
+    <h2>Your mission </h2>
+    <p>
+        you are the commander of the space crew.
+        your task is to build and manage a safe space station
+        while keeping your astronauts alive.
+    </p>
+    <h2>Mission Objectives</h2>
+    <ul>
+        <li>Manage oxygen for your crew</li>
+        <li>Save enough power for the space station</li>
+        <li>save food for your crew</li>
+        <li>protect your crew from raditions</li>
+        <li>Maintain communication with earth</li>
+    </ul>
+    <h2>Know About Saturn</h2>
+
+<p>It has many moons.</p>
+<p>Saturn could float in water.</p>
+<p>It is famous for its beautiful rings.</p>
+<p>Saturn is the sixth planet from the Sun.</p>
+<p>Saturn takes about 29 years to orbit the Sun.</p>
+<p>Saturn is so far away that sunlight takes about 80 minutes to reach it.</p>
+
+<h2>Know About Moon</h2>
+
+<p>Moon has no air or weather</p>
+<p>On moon we weigh much less</p>
+<p>First humans landed on the moon in the year 1969 </p>
+<p>One day on the moon lasts about approximately 30 earth days.</p>
+<p>The Moon is Earth's only natural satellite and the fifth-largest moon in the solar system</p>
+<p>The Moon is gradually moving away from Earth at a rate of about 3.8 centimeters (1.5 inches) every year</p>
+
+    
+<h2>Choose Your Mission Location</h2>
+
+<p>Select where your space adventure begins.</p>
+<button onclick="chooseSaturn()">Saturn Mission</button>
+<button onclick="chooseMoon()">Moon Mission</button>
+<button onclick="window.location.href='/quiz'">
+    Start Space Quiz
+</button>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

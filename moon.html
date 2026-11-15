@@ -1,0 +1,93 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moon Exploration Mission</title>
+
+    <style>
+        body {
+            background-color: #05051c;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #72d5ff;
+        }
+
+        /* Main area where the moon game is displayed */
+        #game {
+            width: 900px;
+            max-width: 95%;
+            height: auto;
+            background-color: #080826;
+            border: 3px solid #72d5ff;
+            display: block;
+            margin: 15px auto;
+        }
+
+        /* Shows the collected resources and game details */
+        .dashboard {
+            font-size: 18px;
+            margin: 12px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 8px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #message {
+            color: #ffe66d;
+            font-size: 21px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Moon Exploration Mission</h1>
+
+    <!-- Resources collected by the astronaut -->
+    <div class="dashboard">
+        Food: <span id="food">0</span>
+        Power: <span id="power">0</span>
+        Oxygen: <span id="oxygen">0</span>
+        Water: <span id="water">0</span>
+    </div>
+
+    <!-- Current game progress -->
+    <div class="dashboard">
+        Score: <span id="score">0</span>
+        Lives: <span id="lives">5</span>
+        Level: <span id="level">1</span>
+    </div>
+
+    <!-- The astronaut moves around inside this game area -->
+    <canvas id="game" width="900" height="550"></canvas>
+
+    <p id="message">
+        Collect 3 of each resource and avoid asteroids!
+    </p>
+
+    <p>
+        Use the arrow keys or W, A, S, D to move your astronaut.
+    </p>
+
+    <button onclick="resetGame()">Restart Mission</button>
+
+    <button onclick="window.location.href='/'">
+        Back to Home
+    </button>
+
+    <!-- Connects the game with its JavaScript file -->
+    <script src="{{ url_for('static', filename='moon.js') }}"></script>
+
+</body>
+</html>
