@@ -1,4 +1,4 @@
-
+console.log("MOON GAME JAVASCRIPT LOADED!");
 // Get the game screen
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
