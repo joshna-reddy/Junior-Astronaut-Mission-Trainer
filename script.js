@@ -4,7 +4,7 @@ function startMission() {
      window.location.href="/moon.html";
 }
 function chooseSaturn() {
-    window.location.href="/saturn.html";
+    window.location.href="/Saturn.html";
 }
     function completeDay() {
         let day = Number(document.getElementById("day").textContent);
